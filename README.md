@@ -27,7 +27,7 @@ This is a Telegram bot that provides information about Minter cryptocurrency. It
 
 - Run the main script:
   ```shell
-  python main.py
+  python telegram_bot.py
 
 ## Documentation
 Minter API Documentation: https://app.swaggerhub.com/apis-docs/GrKamil/minter-explorer_api/2.3.0
