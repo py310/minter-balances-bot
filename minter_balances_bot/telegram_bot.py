@@ -14,7 +14,7 @@ bot_token = config['credentials']['bot_token']
 wallets = config['credentials']['wallets'].split(',')
 
 # Create telegram bot
-bot = TeleBot(config.bot_token)
+bot = TeleBot(bot_token)
 markup = types.ReplyKeyboardMarkup()
 markup.row('/btc', '/bip')
 
@@ -48,7 +48,7 @@ def get_balances(message):
 
         # Calculate total balance and build message text
         total_balance = 0
-        for i, wallet in enumerate(config.wallets):
+        for i, wallet in enumerate(wallets):
             wallet_delegations = minter.get_delegations(wallet)
             wallet_balance     = minter.get_current_balance(wallet)
             wallet_unbonds     = minter.get_unbonds(wallet)
